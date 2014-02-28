@@ -42,7 +42,7 @@
 + (BOOL)createFile:(NSData *)fileData atPath:(NSString *)path
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    return [fileManager createFileAtPath:path contents:file attributes:nil];
+    return [fileManager createFileAtPath:path contents:fileData attributes:nil];
 }
 
 + (BOOL)removeFileAtPath:(NSString *)path
