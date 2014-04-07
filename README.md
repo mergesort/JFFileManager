@@ -10,22 +10,22 @@ How To Install It
 
 install by cocoapods : 
 
-  pod 'JFFileManager', '~> 1.0.2'
+    pod 'JFFileManager', '~> 1.0.2'
 
 install by manual
 
-  drag and drop JFFileManager.h/m files into the project.
+    drag and drop JFFileManager.h/m files into the project.
 
 
 
 How To Use It
 -------------
 
-import 'JFFileManager.h'
+    import 'JFFileManager.h'
 
-//just call the methods
+    //just call the methods
 
-[JFFileManager documentsDirectory];//return the document directory of the application
+    [JFFileManager documentsDirectory];//return the document directory of the application
 
 
 
