@@ -62,28 +62,20 @@
 {
     NSString *filePathAndDirectory = [filePath stringByAppendingPathComponent:directoryName];
     NSError *error;
-    
-    if (![[NSFileManager defaultManager] createDirectoryAtPath:filePathAndDirectory
-                                   withIntermediateDirectories:NO
-                                                    attributes:nil
-                                                         error:&error])
+    if (![[NSFileManager defaultManager] createDirectoryAtPath:filePathAndDirectory withIntermediateDirectories:NO attributes:nil error:&error])
     {
-        NSLog(@"Create directory error: %@", error);
         return NO;
     }else{
         return YES;
     }
 }
 
-
 +(BOOL)deleteDirectory:(NSString *)directoryName atFilePath:(NSString *)filePath
 {
     NSString *filePathAndDirectory = [filePath stringByAppendingPathComponent:directoryName];
-    if (! [[NSFileManager defaultManager]removeItemAtPath:filePathAndDirectory error:nil] ){
-        NSLog(@"remove directory error");
+    if (![[NSFileManager defaultManager]removeItemAtPath:filePathAndDirectory error:nil]){
         return NO;
     }else{
-        NSLog(@"remove directory success");
         return YES;
     }
 }

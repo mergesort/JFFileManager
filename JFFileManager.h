@@ -60,7 +60,6 @@
  @param directoryName is the name of the directory which you wanna create 
  @param filePath can be any directory paths of the application
  return BOOL Whether or not the directory was created
- 
  */
 
 + (BOOL)createDirectory:(NSString *)directoryName atFilePath:(NSString *)filePath;
@@ -71,7 +70,6 @@
  @param directoryName is the name of the directory which you wanna delete
  @param filePath can be any directory paths of the application
  return BOOL Whether or not the directory was deleted
- 
  */
 
 + (BOOL)deleteDirectory:(NSString *)directoryName atFilePath:(NSString *)filePath;
