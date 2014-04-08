@@ -58,4 +58,26 @@
     return content;
 }
 
++ (BOOL)createDirectory:(NSString *)directoryName atFilePath:(NSString *)filePath
+{
+    NSString *filePathAndDirectory = [filePath stringByAppendingPathComponent:directoryName];
+    NSError *error;
+    if (![[NSFileManager defaultManager] createDirectoryAtPath:filePathAndDirectory withIntermediateDirectories:NO attributes:nil error:&error])
+    {
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
++(BOOL)deleteDirectory:(NSString *)directoryName atFilePath:(NSString *)filePath
+{
+    NSString *filePathAndDirectory = [filePath stringByAppendingPathComponent:directoryName];
+    if (![[NSFileManager defaultManager]removeItemAtPath:filePathAndDirectory error:nil]){
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
 @end
