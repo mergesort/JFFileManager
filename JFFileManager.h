@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface JFFileManager : NSObject
 
 /**
@@ -52,6 +53,17 @@
  */
 + (BOOL)removeFileAtPath:(NSString *)path;
 
-+ (NSString *)contentsOfFileAtPath:(NSString *)path;
++ (NSData *)contentOfFileAtPath:(NSString *)path;
+
++ (UIImage *)imageAtFilePath:(NSString *)path;
+
++ (NSString *)stringContentsOfFileAtPath:(NSString *)path;
+
++ (NSArray *)contentsOfDirectoryAtPath:(NSString *)path;
+
++ (NSError *)createDirectoryAtPath:(NSString *)path;
+
++ (BOOL)isDirectoryAtPath:(NSString *)path;
++ (BOOL)isFileAtPath:(NSString *)path;
 
 @end
